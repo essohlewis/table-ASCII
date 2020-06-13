@@ -1,0 +1,112 @@
+### function point code / caratère ASCII
+def code_ASCII():
+    while True:
+        try:
+            sortir = input('Veuilez taper "Quit" pour quitter ou autre pour continuer : ')
+            if sortir == "Quit" or sortir == "quit":
+                return 'Merci et à très bientôt...!'
+                break
+
+            print("Tape 1 pour la valeur du point de code ASCII ou 0 pour obtenir le caractère correspondant. (1/0) ")
+            valeur_entre = (input('_________: '))
+            if valeur_entre.isalnum:
+                if valeur_entre == '0':
+                    print(('*'*74))
+                    print('*',('*** bienvenue ***').upper().center(70),'*')
+                    print(('*'*74))
+                    
+                    print('Oui» Continuer ou «Non Retouner ( o/n )')
+                    a = input('___:')        
+                    while a:
+                        if a == "n":
+                            break
+                        elif a == 'o':
+                            # Si vous connaissez le point de code (numéro) 
+                            # et souhaitez obtenir le caractère correspondant
+
+                            try:
+                                if True:
+                                    print('\n*'*3,'-'*70)
+                                    try:
+                                        c_n_donne = int(input('\n""""Pour "retour" entrez nombre entier.!""""\nEntrez le point de code du caractère à obtenir : '))
+                                        quit = input('Voullez vous continuer la partie ? n/o ')
+                                        print('Veuillez entrer ( o/n ).\n')
+                                    except:
+                                        print('Veuillez resseiller')
+                                    if quit == "n" or quit == "N":
+                                        print(('*'*74))
+                                        print('*',('*** acceuil ***').upper().center(70),'*')
+                                        print(('*'*74))
+                                        break
+                                    elif c_n_donne >= 0:
+                                        print('_'*5,'caractère obtenir','_'*5)
+                                        print(chr(c_n_donne))
+                                        print('_'*33)
+                                        continue
+                                    else:
+                                        print('Veuillez resseiller')
+                            except OverflowError:
+                                print('La demande est au delar de nos attente.!')
+                            except ValueError:
+                                print('Veuillez remplir les champs avec des nombres entier.')
+                            except (KeyboardInterrupt, EOFError):
+                                print('HOoo......! "Quit" ou "quit" si vous voulez quitter.\n')
+                            except UnboundLocalError:
+                                print('Ok')
+                        else:
+                            print('Erreur Gell 3012!\n'.upper()*3)
+                            break
+                ## demande à l'utilisateur s'il veux retoutner ou continuer la partie
+                elif valeur_entre == '1':
+                    print(('*'*74))
+                    print('*',('*** bienvenue ***').upper().center(70),'*')
+                    print(('*'*74))
+
+                    print('Oui» Continuer ou «Non Retouner ( o/n )')
+                    a = input('___:')        
+                    while a:
+                        if a == "n":
+                            break
+                        elif a == 'o':
+                            #Si tu veux connaître la valeur 
+                            # du point de code ASCII / UNICODE 
+                            # d'un caractère spécifique
+
+
+                            if True:
+                                try:
+                                    print('\n*'*3,'-'*70)
+                                    quit = input('Voullez vous continuer la partie ? ( o/n ) ')
+                                    c_n_donne = input('\nEntrez le caractère à obtenir : ')
+                                    if quit == "n" or quit == "N":
+                                        print(('*'*74))
+                                        print('*',('*** acceuil ***').upper().center(70),'*')
+                                        print(('*'*74))
+                                        break
+                                    elif len(c_n_donne) == 1:
+                                        print('_'*5,'Point de code obtenir','_'*5)
+                                        print(ord(c_n_donne)) 
+                                        print('_'*33)
+                                        continue
+                                    else:
+                                        print('Svp veuillez respecter le protocole.')
+                                except (KeyboardInterrupt, EOFError):
+                                    print('HOoo......! "Quit" ou "quit" si vous voulez quitter.\n')
+                                except UnboundLocalError:
+                                    print('Ok')
+                        else:
+                            print('Erreur Gell 3012!\n'.upper()*3)
+                            break
+                else:
+                    print('Veuillez entrer ( 1/0 ) ')
+            else:
+                print('Veuillez resseiller....')
+                continue
+        except (KeyboardInterrupt, EOFError):
+            print('HOoo......! "Quit" ou "quit" si vous voulez quitter.\n')
+
+        except ValueError:
+            print('Veuillez remplir les champs avec des nombres entier.')
+
+conversion_activ =  code_ASCII()
+print(conversion_activ)
